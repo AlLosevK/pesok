@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after
+  box-sizing: inherit
+
+html
+  box-sizing: border-box
+
+
+body
+  margin: 0
+  font-family: 'Open Sans', sans-serif
+  overflow-x: hidden
+  font-size: 16px
+  line-height: 150%
+  font-weight: 400
+  color: $b
+  background-color: $bg-wd
+  position: relative
+  @include media-tablet
+    font-size: 20px
+  // @include media-customMin(2000px)
+  //   font-size: calc(20/1920)*100vw
+
+main
+  overflow-x: hidden
+
+p
+  padding: 0
+  margin: 0
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  padding: 0
+  margin: 0
+
+h2
+  font-weight: 700
+  font-size: 24px
+  line-height: 137.5%
+  // @include media-tablet
+  //   font-size: 40px
+  // @include media-desktop
+  //   font-size: calc(48/1920)*100vw
+  //   margin-bottom: calc(12/1920)*100vw
+
+
+section
+  padding: 60px 0
+
+  @include media-tablet
+    padding: 80px 0
+
+  @include media-desktop
+    padding: 60px 0
+
+img
+  max-width: 100%
+  display: block
+  margin: 0 auto

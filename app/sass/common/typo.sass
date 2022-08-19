@@ -1,0 +1,144 @@
+.typo
+  background-color: $bg-w
+  position: relative
+  z-index: 3
+  &__abs
+    display: none
+  &__title
+    &-promo
+      font-weight: 800
+      font-size: 60px
+      line-height: 82px
+      color: $bg-od
+      margin: 24px 0 16px
+  &__subtitle
+    display: inline-block
+    background-color: $b
+    color: $bg-w
+    padding: 4px 12px
+    border-radius: 40px
+    &:nth-child(3)
+       margin-right: 14px
+  &__fonts
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    padding: 20px 0
+    gap: 27px
+  &__font
+    width: 100%
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    &:nth-child(1)
+      & .typo__font-style
+        font-size: 22px
+        line-height: 30px
+    &:nth-child(2)
+      & .typo__font-style
+        font-size: 17px
+        line-height: 30px
+        font-weight: 600
+    &:nth-child(3)
+      & .typo__font-style
+        font-size: 16px
+        line-height: 20px
+    &:nth-child(4)
+      & .typo__font-style
+        font-size: 15px
+        line-height: 20px
+    &:nth-child(5)
+      & .typo__font-style
+        font-size: 13px
+        line-height: 16px
+    &-style
+      width: 50%
+    &-name
+      color: $bg-gd
+      padding-left: 30px
+      position: relative
+      &:after
+        content: ""
+        position: absolute
+        left: 0
+        top: 4px
+        width: 1px
+        height: 16px
+        background-color: #ededed
+  &__colors
+    display: grid
+    grid-template-rows: repeat(2, 1fr)
+    grid-template-columns: repeat(3, 1fr)
+    border-radius: 8px
+    overflow: hidden
+  &__color
+    height: 100px
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    &:nth-child(1)
+      background-color: $bg-o
+      color: $bg-w
+    &:nth-child(2)
+      background-color: $bg-pd
+    &:nth-child(3)
+      background-color: $bg-p
+    &:nth-child(4)
+      background-color: $b
+      color: $bg-w
+    &:nth-child(5)
+      background-color: $bg-d
+      color: $bg-w
+    &:nth-child(6)
+      background-color: $bg-gd
+      color: $bg-w
+
+
+
+  @include media-tablet
+    &__title
+      &-promo
+        font-size: 120px
+        line-height: 163.42px
+        margin: 32px 0 20px
+    &__subtitle
+      padding: 8px 16px
+
+
+  @include media-desktop
+    padding: 100px 0
+    .row:last-child
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: flex-end
+
+    &__fonts
+      gap: 20px
+      padding: 0
+      padding-top: 32px
+    &__font
+      &-style
+        margin-right: 30px
+        min-width: 134px
+    &__colors
+      width: 540px
+    &__title
+      &-promo
+        margin: 40px 0 24px
+    &__abs
+      display: block
+      position: absolute
+      right: 0
+      top: -7%

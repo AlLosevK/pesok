@@ -1,0 +1,54 @@
+.goals
+  position: relative
+  z-index: 3
+  background-color: $bg-wd
+  &__items
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    gap: 20px
+  &__item
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+    gap: 16px
+    background-color: $bg-w
+    padding: 20px
+    border-radius: 12px
+  &__ico
+
+  &__text
+    p
+      display: block
+    span
+      display: block
+      color: $bg-od
+      font-weight: 700
+
+
+
+  @include media-tablet
+    &__items
+      gap: 30px
+      justify-content: center
+    &__item
+      width: 315px
+      align-items: flex-start
+    &__ico
+      min-width: 48px
+      min-height: 48px
+
+
+  @include media-desktop
+    &__item
+      gap: 30px
+      flex-wrap: nowrap
+      width: 350px

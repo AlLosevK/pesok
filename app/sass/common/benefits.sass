@@ -1,0 +1,87 @@
+.benefits
+  position: relative
+  z-index: 3
+  background-color: #f8f8f8
+  &__items
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: stretch
+    flex-wrap: wrap
+    gap: 24px
+  &__item
+    border-radius: 20px
+    color: #fff
+    padding: 24px
+    padding-bottom: 0
+    width: 100%
+    overflow: hidden
+    & .text
+      line-height: 137.5%
+    &:first-child
+      background-color: $bg-d
+    &:nth-child(2)
+      background-color: $bg-pd
+      color: $b
+      .benefits__item-img
+        margin-right: -24px
+        &:last-child
+          margin-left: -24px
+          margin-right: auto
+    &:last-child
+      background-color: $bg-od
+      .benefits__item-img
+        margin-right: -24px
+    &-img
+      padding-top: 36px
+  & .text
+    margin: 16px 0 24px
+
+
+
+  @include media-tablet
+    background-image: url(../images/dest/icons/benefits-tablet-bg.svg)
+    background-repeat: no-repeat
+    background-position: calc(280/720)*100vw 87%
+    & .text
+      margin: 20px 0 22px
+    &__items
+      gap: 32px 24px
+    &__item
+      width: 315px
+
+  @include media-desktop
+    background-image: none
+    & .text
+      margin: 20px 0 40px
+    &__ico
+      margin-top: 40px
+    &__items
+      justify-content: space-between
+      gap: 30px
+    &__item
+      min-width: 350px
+      min-height: 760px
+      padding: 0 40px
+      &:nth-child(2)
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        flex-direction: column
+        .benefits__item-img
+          margin-right: -40px
+          &:last-child
+            margin-left: -40px
+            margin-right: auto
+        .benefits__ico
+          order: 1
+          margin-top: 50px
+        .text
+          order: 2
+          margin-top: 16px
+      &:last-child
+        .benefits__item-img
+          margin-right: -40px
+          padding-top: 150px

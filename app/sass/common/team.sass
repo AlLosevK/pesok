@@ -1,0 +1,106 @@
+.team
+  background-color: $bg-w
+  &__items
+    padding-top: 24px
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    gap: 24px 16px
+  &__item
+    width: 156px
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+    overflow: visible
+    &:nth-child(2)
+      .team__ava-bg
+        animation: spin-45 5s linear infinite
+        transform: rotate(45deg)
+    &:nth-child(3)
+      .team__ava-bg
+        animation: spin-90 5s linear infinite
+        transform: rotate(90deg)
+    &:nth-child(4)
+      .team__ava-bg
+        animation: spin-135 5s linear infinite
+        transform: rotate(135deg)
+    &:nth-child(5)
+      .team__ava-bg
+        animation: spin-180 5s linear infinite
+        transform: rotate(180deg)
+    &:nth-child(6)
+      .team__ava-bg
+        animation: spin-225 5s linear infinite
+        transform: rotate(215deg)
+    &:nth-child(7)
+      .team__ava-bg
+        animation: spin-270 5s linear infinite
+        transform: rotate(260deg)
+
+    &:hover
+      & img
+        background-color: $bg-o
+      & .team__ava-bg
+        animation: spin .9s linear infinite
+    p
+      margin: 12px 0 8px
+      font-size: 20px
+      line-height: 150%
+    span
+      color: $bg-gd
+    img
+      background-color: $bg-od
+      border-radius: 50%
+  &__ava
+    width: 107px
+    height: 107px
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+    z-index: 2
+    overflow: visible
+    border: 1px solid #ededed
+    padding: 5px
+    border-radius: 50%
+    z-index: 100
+    overflow: visible
+    img
+      width: 88px
+      height: 88px
+      margin: 0
+      &[src*="team.svg"]
+        padding: 24px
+    &-bg
+      width: 109%
+      height: 109%
+      position: absolute
+      background-image: url(../images/dest/icons/team-ava-ball.svg)
+      background-size: 8px 8px
+      background-repeat: no-repeat
+      background-position: 50% -0%
+      animation: spin 5s linear infinite
+
+
+
+
+  @include media-tablet
+    &__items
+      gap: 30px 15px
+    &__item
+      width: 210px
+
+  @include media-desktop
+    &__ava
+      border: 2px solid #ededed

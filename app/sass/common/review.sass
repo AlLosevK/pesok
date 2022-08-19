@@ -1,0 +1,27 @@
+.review
+  & .text
+    margin: 16px 0 24px
+    font-size: 16px
+    line-height: 150%
+  &__img
+    filter: drop-shadow(8px 16px 48px rgba(0, 0, 0, 0.1))
+    border-radius: 20px
+
+
+  @include media-tablet
+    & .text
+      font-size: 20px
+      margin: 20px 0 32px
+    &__img
+      width: 435px
+
+  @include media-desktop
+    .container
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+    .row
+      width: 50%
+    &__img
+      width: 445px

@@ -1,0 +1,23 @@
+section.contacts
+  .container
+    .row
+      h2.contacts__title Заинтересовал проект?
+      .text
+        p.contacts__descr Наша команда профессионалов всегда рада помочь Вашему бизнесу, воплотить даже самые сложные идеи. 
+        p.contacts__descr Мы создаем уникальный и качественный продукт. 
+        p.contacts__descr Давайте обсудим Ваш проект ;)
+    .row
+      .contacts__item
+        .contacts__item-ico
+          +icon("phone", "contacts__ico")
+        .contacts__item-text
+          span Номер телефона
+          a.contacts__link(href="tel:9090") 8 (123) 456-78-90
+      .contacts__item
+        .contacts__item-ico
+          +icon("email", "contacts__ico")
+        .contacts__item-text
+          span Почта
+          a.contacts__link(href="") pochta@pochta.sobaka
+    .row
+      button.contacts__btn(type="button") Обсудить проект

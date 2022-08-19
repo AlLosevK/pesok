@@ -1,0 +1,37 @@
+.anim
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  overflow: hidden
+  width: 1125px
+  padding-right: 25px
+  margin: 0 auto
+  transform: rotate(9deg) translate(80%,-12%) skew(-6deg,-9deg)
+  gap: 40px
+  position: absolute
+  top: 0
+  right: 0
+  z-index: 5
+  &_c
+    display: grid
+    grid-template-rows: 1fr 1fr 1fr 1fr
+    gap: 40px
+    z-index: 5
+    &:nth-child(1)
+      animation: anim-1 12s ease-in-out infinite
+    &:nth-child(2)
+      transform: translateY(-70%)
+      animation: anim-2 12s ease-in-out infinite
+    &:nth-child(3)
+      animation: anim-1 12s ease-in-out infinite
+  &__img
+    filter: drop-shadow(20px 28px 5px rgba(0, 0, 0, 0.3))
+    z-index: 5
+
+
+  @include media-custom(1920px)
+    transform: rotate(9deg) translate(90%,-17%) skew(-6deg,-9deg)
+    width: 990px
+
+
+  @include media-custom(1139px)
+    display: none

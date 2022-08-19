@@ -1,0 +1,29 @@
+.tech
+  &__items
+    margin-top: 24px
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: flex-start
+    flex-wrap: wrap
+    gap: 20px 16px
+
+
+  @include media-tablet
+    &__title
+      text-align: center
+    &__items
+      justify-content: space-between
+      width: 648px
+      margin: 32px auto 0
+
+  @include media-desktop
+    &__items
+      width: 796px
+      margin-top: 40px
+      gap: 30px
+    &__item
+      width: 88px
+      height: 88px

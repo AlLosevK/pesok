@@ -1,0 +1,76 @@
+.contacts
+  background-color: $bg-w
+  &__title
+    color: $bg-od
+    text-align: center
+  & .text
+    margin: 24px 0
+    text-align: center
+  &__item
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    gap: 16px
+    margin-bottom: 20px
+    padding: 20px
+    background-color: $bg-wd
+    border-radius: 12px
+    &-text
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-start
+      color: $bg-gd
+      gap: 6px
+      line-height: 137.5%
+  &__link
+    color: $bg-od
+    &:hover
+      color: $bg-o
+      text-decoration: none
+  &__btn
+    width: 100%
+    background-color: $bg-od
+    border: none
+    padding: 20px 0
+    border-radius: 12px
+    color: $bg-w
+    font-size: 24px
+    font-size: 137.5%
+    &:hover
+      background-color: $bg-o
+      transition: all .3s
+
+
+  @include media-tablet
+    &__item-text
+      gap: 4px
+    .row:nth-child(2)
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      gap: 30px
+      .contacts__item
+        width: 100%
+    &__btn
+      width: 446px
+      display: block
+      margin: 0 auto
+
+
+  @include media-desktop
+    .row:nth-child(2)
+      justify-content: center
+    &__item
+      max-width: 350px
+      margin-bottom: 40px
+    & .text
+      margin: 40px 0

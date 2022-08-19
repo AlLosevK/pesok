@@ -1,0 +1,66 @@
+// .slider
+//   &__wrap
+//     // margin-right: -20vw
+//   &__item
+//     margin-right: 20px
+//
+//   @include media-tablet
+//     &__wrap
+//       margin-right: -20vw
+//
+
+.slider
+  overflow: hidden
+  // height: 945px
+  .row:first-child
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 24px
+  &__title
+    display: none
+  &__arrows
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row-
+    justify-content: space-between
+    align-items: center
+    width: 114px
+    height: 40px
+  &__wrap
+    overflow: hidden
+    position: absolute
+    top: 0
+    left: 0
+  &__row
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    gap: 50px
+    align-items: center
+    width: 2800px
+    overflow: visible
+    transition: all .7s
+
+
+  @include media-tablet
+    // height: 998px
+    .row:first-child
+      margin-bottom: 40px
+
+
+  @include media-desktop
+    height: 600px
+    padding: 100px 0
+    .row:first-child
+      margin-bottom: 40px
+    &__title
+      display: block
+      &-mob
+        display: none
